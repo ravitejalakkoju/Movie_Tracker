@@ -1,0 +1,273 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <link rel="shortcut icon" href="../public/img/favicon-32x32.png" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>MovieTracker // Search over 100's of Movies</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main-top">
+            <div class="nav__bar">
+                <div class="logo">
+                    <img src="../public/img/logodarkmikn.jpg">
+                </div>
+                <div class="nav__list">
+                    <ul class="nav__list--icon">
+                            <li>
+                                <div class="dropdown">
+                                    <div class="dropdown__field">
+                                      <i class="fas fa-bookmark"></i>
+                                        </div>
+                                        <div class="dropdown__panel">
+                                          <ul class="dropdown__list scrollable-menu" id="bookmarkList">
+                                              <!-- <li>
+                                                  <a class="dropdownbookmarks__link">
+                                                      <div class="dropdown__data">
+                                                          <h4 class="dropdown__name">Avengers :Infinity War</h4>  
+                                                          <p class="dropdown__director">Jos Whendon, Anthony Russo, Joe Russo</p>
+                                                      </div>
+                                                      <div class="dropdown__figure">
+                                                          <figure class="dropdown__fig">
+                                                              <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6250/6250129_sa.jpg;maxHeight=640;maxWidth=550" class="show__img" alt="Test">
+                                                          </figure>
+                                                      </div>
+                                                  </a>
+                                              </li> -->
+                                          </ul>
+                                      </div>
+                                </div>
+                              </li>
+                            <li>
+                              <div class="dropdown">
+                                  <div class="dropdown__field">
+                                      <i class="fas fa-heart"></i>
+                                      </div>
+                                      <div class="dropdown__panel">
+                                        <ul class="dropdown__list scrollable-menu" id="likeList">
+                                            <!-- <li>
+                                                <a class="dropdown__link" href="#23456">
+                                                    <div class="dropdown__data">
+                                                        <h4 class="dropdown__name">Avengers :Infinity War</h4>  
+                                                        <p class="dropdown__director">Jos Whendon, Anthony Russo, Joe Russo</p>
+                                                    </div>
+                                                    <div class="dropdown__figure">
+                                                        <figure class="dropdown__fig">
+                                                            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6250/6250129_sa.jpg;maxHeight=640;maxWidth=550" class="show__img" alt="Test">
+                                                        </figure>
+                                                    </div>
+                                                </a>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                              </div>
+                            </li>
+                        <li><a href="#" id="top10">Top10</a></li>
+                        <li><a href="#" class="btn__full" id="signout">SignOut<i class="fas fa-sign-out-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter">
+                <section class="filter-section">
+                <p class="filter-text">Filters :</p>
+                        <select name="year" id="year">
+                            <option value="select" selected>--year--</option>
+                            <option value="All">All</option>
+                        </select>
+                        <!-- <select name="type" id="type">
+                            <option value="select" selected>--type--</option>
+                            <option value="All" selected>All</option>
+                            <option value="type_movie">movie</option>
+                            <option value="type_series">series</option>
+                        </select> -->
+                        <select name="rating" id="rating">
+                            <option value="select" selected>--Rating--</option>
+                            <option value="All">All</option>
+                            <option value="10">10</option>
+                            <option value="9">9</option>
+                            <option value="8">8</option>
+                            <option value="7">7</option>
+                            <option value="6">6</option>
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </select>
+                </section>
+             </div><br>
+             <div class="search">
+                <section class="search-bar">
+                        <p class="search-text">Search :</p>
+                            <input type="text" name="search" id="search" placeholder="search" required>
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                </section>
+            </div>
+        </div>
+        <div id="movie-det">
+        <!--
+          <h2 style="margin-top: 2%;">Movie</h2> 
+        <div class="single__movie">
+          <!--
+          <h1>Enthiran</h1>
+          <div class="poster__top">
+            <div class="poster">
+              <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6250/6250129_sa.jpg" alt="moviename">
+              <div class="rating">imdb <span>9.8 / 10</span></div>
+            </div>
+            <div class="poster__data">
+              <p class="director">Director: <span>S. Shankar</span></p>
+              <p class="lang">Language: <span>"Tamil"</span></p>
+              <p class="pro">Production: <span>Ficus</span></p>
+              <p class="year">Year: <span>01 Oct 2010</span></p>
+              <p class="run">Runtime: <span>174min</span></p>
+              <p class="box">BoxOffice: <span>$1,520,108</span></p>
+              <p class="country">Country: <span>India</span></p>
+            </div>
+            <div class="check">
+              <a href="#" class="bookmark"><i class="far fa-bookmark"></i></a><br><br>
+              <!-- <i class="fas fa-bookmark"></i> -->
+              <!-- <a href="#" class="liked"><i class="far fa-heart"></i></a> -->
+              <!-- <i class="fas fa-heart"></i> -->
+            <!-- </div>
+          </div>
+          <div class="plot">
+            <p>Plot: <br><span> "A brilliant scientist builds a humanoid robot to protect mankind, but things go awry when human emotions are programmed and inner turmoil causes the robot to act against him."</span> </p>
+          </div>
+          <div class="actors">
+            <p>Actors: <span>RajiniKanth, Aishwarya Rai</span></p>
+          </div>
+          <div class="writers">
+            <p>Writers :<span> Shankar, Pavan</span></p>
+          </div>
+          <div class="genres">
+            <p>Genre :<span> Sci-Fi, Fantasy</span></p>
+          </div>
+          <div class="awards">
+            <p>Awards :<span> 11 nominations and 5 awards</span></p>
+          </div>
+        </div> -->
+      </div>
+        <div class="list">
+                <!-- <section class="movies__details">
+                     <figure class="movie">
+                  <div class="movie__hero">
+                    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6250/6250129_sa.jpg;maxHeight=640;maxWidth=550"
+                         alt="movie" class="movie__img">
+                  </div>
+                  <div class="movie__content">
+                    <div class="movie__title">
+                    <h1 class="movie__heading">Avengers :Infinity War</h1>
+                    <a href="#" class="bookmark"><i class="far fa-bookmark"></i></a>
+                    <i class="fas fa-bookmark"></i>
+                    <a href="#" class="liked"><i class="far fa-heart"></i></a>
+                    <i class="fas fa-heart"></i>
+                  </div>
+                    <div class="movie__description">The Avengers must stop Thanos and his army from acquiring all the infinity stones. But the mad Titan is prepared to go to any lengths in order to do what he thinks is necessary.</div>
+                    <div class="tags">
+                      <p>tags :</p>
+                      <div class="tags-add">
+                        <div class="movie__tag movie__tag--action">#action</div>
+                        <div class="movie__tag movie__tag--adventure">#adventure</div>
+                        <div class="movie__tag movie__tag--marvel">#marvel</div>
+                        <div class="movie__tag movie__tag--sequel">#sequel</div>
+                        </div>
+                      </div>
+                    <div class="movie__details">
+                      <p class="movie__detail"><span class="emoji">imdb</span>8.5 / 10</p>
+                      <p class="movie__detail"><span class="emoji">⏱</span>162 min</p>
+                    </div>
+                  </div>
+                </figure>      
+                </section>
+          <section>
+            <figure class="movie">
+              <div class="movie__hero">
+                <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQPpcKQ9eWZGxJe6eXyCW91eayLVm4KqruvJz3GP0F2T2w46yKZ"
+                     alt="movie" class="movie__img">
+              </div>
+              <div class="movie__content">
+                  
+                <div class="movie__title">
+                <h1 class="movie__heading">Black Panther </h1>
+                <a href="#" class="bookmark"><i class="far fa-bookmark"></i></a>
+                <i class="fas fa-bookmark"></i>
+                <a href="#" class="liked"><i class="far fa-heart"></i></a>
+                <i class="fas fa-heart"></i>
+              </div>
+                <p class="movie__description">After his father's death, T'Challa returns home to Wakanda to inherit his throne. However, a powerful enemy related to his family threatens to attack his nation.</p>
+                <div class="tags">
+                  <p>tags :</p>
+                  <div class="tags-add">
+                    <div class="movie__tag movie__tag--action">#action</div>
+                    <div class="movie__tag movie__tag--adventure">#adventure</div>
+                    <div class="movie__tag movie__tag--marvel">#marvel</div>
+                    </div>
+                  </div>
+                <div class="movie__details">
+                  <p class="movie__detail"><span class="emoji">imdb</span>7.3 / 10</p>
+                  <p class="movie__detail"><span class="emoji">⏱</span>142 min</p>
+                </div>
+              </div>
+            </figure>
+        </section> -->
+                    <!-- <div class="results__pages"> -->
+                        
+                        <!-- <button class="btn-inline results__btn--prev">
+                            <span>Page 1</span>
+                            <i class="fas fa-caret-left"></i>
+                        </button>
+                        <button class="btn-inline results__btn--next">
+                            <span>Page 3</span>
+                            <i class="fas fa-caret-right"></i>
+                        </button> -->
+                       
+                    </div>
+                    <div class="list__top10">
+                      <!-- <h2>Top10 movies right now</h2> -->
+                <!-- <section class="movies__details">
+                      <figure class="movie">
+                        <div class="movie__hero">
+                          <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6250/6250129_sa.jpg;maxHeight=640;maxWidth=550"
+                               alt="movie" class="movie__img">
+                        </div>
+                        <div class="movie__content">
+                          <div class="movie__title">
+                          <h1 class="movie__heading">Avengers :Infinity War</h1>
+                          <a href="#" class="bookmark"><i class="far fa-bookmark"></i></a>
+                          <!-- <i class="fas fa-bookmark"></i> -->
+                          <!-- <a href="#" class="liked"><i class="far fa-heart"></i></a> -->
+                          <!-- <i class="fas fa-heart"></i> -->
+                        <!-- </div>
+                          <p class="movie__description">The Avengers must stop Thanos and his army from acquiring all the infinity stones. But the mad Titan is prepared to go to any lengths in order to do what he thinks is necessary.</p>
+                          <div class="tags">
+                            <p>tags :</p>
+                            <div class="tags-add">
+                              <div class="movie__tag movie__tag--action">#action</div>
+                              <div class="movie__tag movie__tag--adventure">#adventure</div>
+                              <div class="movie__tag movie__tag--marvel">#marvel</div>
+                              <div class="movie__tag movie__tag--sequel">#sequel</div>
+                              </div>
+                            </div>
+                          <div class="movie__details">
+                            <p class="movie__detail"><span class="emoji">imdb</span>8.5 / 10</p>
+                            <p class="movie__detail"><span class="emoji">⏱</span>162 min</p>
+                          </div>
+                        </div>
+                      </figure>      
+                      </section> -->
+                  </div>
+                    <footer>
+
+                    </footer>
+            </div>
+        </div>
+    <script type="text/javascript" src="../public/js/bundle.js"></script></body>
+</html>

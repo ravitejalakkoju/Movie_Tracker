@@ -1,0 +1,110 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <link rel="stylesheet" href="../public/css/style.css">
+        <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+        <title>MovieTracker // Search over 100's of Movies</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav__bar">
+                <div class="logo">
+                    <img src="../public/img/logodarkmikn.jpg">
+                </div>
+                <div class="nav__list">
+                    <ul class="nav__list--icon">
+                        <li><a href="#" id="top10">Top10</a></li>
+                        <li><a href="#" class="btn__full" id="nav__signup">SignUp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <header class="header">
+                <div class="signin-form">
+                    <form>
+
+                            <i class="fas fa-user sbtn"></i><input type="text" name="username" class="form" id="form-un" placeholder="unique username"><br>
+                            <i class="fas fa-key sbtn"></i><input type="password" name="pass" class="form" id="form-pa" placeholder="password"><a href="#" id="info">@new user?</a>
+                            <!--signedin.html--><!-- <i class="fas fa-key sbtn"></i><input type="password" name="pass" class="form" id="form-rpa" placeholder="reEnter password"><br> -->
+                            <a href="" ><button type="button" class="btn signin"><p>SignIn</p></button></a>
+                        <span><button class="btn signup"><p>SignUp</p></button><p class="msg">new user? SignUp</p></span>
+                    </form>
+                </div>
+            </header>
+            <!-- <div class="signup-form clearfix">
+                    <form>
+                        <input type="text" name="username" class="form" id="form-un" placeholder="unique username"><br>
+                        <input type="password" name="pass" class="form" id="form-pa" placeholder="password"><br>
+                        <input type="password" name="rpass" class="form" id="form-rpa" placeholder="reEnter password"><br>
+                        <span>
+                        <button class="btn signup"><p>SignUp</p></button><p class="msg">new user? SignUp</p></span>
+                    </form>
+            </div> -->
+            <div class="track__msg">
+                <h3>Keep Tracked</h3>
+                <ul class="track__msg-list">
+                    <li class="track__msg--list">1. Track your movies</li>
+                    <li class="track__msg--list">2. Like Movies you watched</li>
+                    <li class="track__msg--list">3. Bookmark movies you wanna watch next</li>
+                    <li class="track__msg--list">4. Search Movies</li>
+                </ul>
+            </div>
+            <video width="100%" autoplay loop>
+              <!-- <source src="./vid/movietracker_Large (1).mp4" type="video/mp4"> -->
+                <source src="../public/vid/movieTracker.mp4" type="video/mp4">
+            </video>
+            <div class="list__top10">
+                <!-- <h2>Top10 movies right now</h2> -->
+          <!-- <section class="movies__details">
+                <figure class="movie">
+                  <div class="movie__hero">
+                    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6250/6250129_sa.jpg;maxHeight=640;maxWidth=550"
+                         alt="movie" class="movie__img">
+                  </div>
+                  <div class="movie__content">
+                    <div class="movie__title">
+                    <h1 class="movie__heading">Avengers :Infinity War</h1>
+                    <a href="#" class="bookmark"><i class="far fa-bookmark"></i></a>
+                    <!-- <i class="fas fa-bookmark"></i> -->
+                    <!-- <a href="#" class="liked"><i class="far fa-heart"></i></a> -->
+                    <!-- <i class="fas fa-heart"></i> -->
+                  <!-- </div>
+                    <p class="movie__description">The Avengers must stop Thanos and his army from acquiring all the infinity stones. But the mad Titan is prepared to go to any lengths in order to do what he thinks is necessary.</p>
+                    <div class="tags">
+                      <p>tags :</p>
+                      <div class="tags-add">
+                        <div class="movie__tag movie__tag--action">#action</div>
+                        <div class="movie__tag movie__tag--adventure">#adventure</div>
+                        <div class="movie__tag movie__tag--marvel">#marvel</div>
+                        <div class="movie__tag movie__tag--sequel">#sequel</div>
+                        </div>
+                      </div>
+                    <div class="movie__details">
+                      <p class="movie__detail"><span class="emoji">imdb</span>8.5 / 10</p>
+                      <p class="movie__detail"><span class="emoji">⏱</span>162 min</p>
+                    </div>
+                  </div>
+                </figure>      
+                </section> -->
+            </div>
+        </div>
+        <footer>
+          <ul class="social-links">
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://twitter.com/login?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://aboutme.google.com/u/0/?referer=gplus" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <div class="row">
+          <p>
+              Copyright &copy; 2019 by MovieTracker. All rights reserved
+          </p>
+      </div>
+        </footer>
+    <script type="text/javascript" src="../public/js/bundle.js"></script></body>
+</html>
